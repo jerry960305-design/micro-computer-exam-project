@@ -40,8 +40,8 @@ micro-computer-exam-project/
 
 | 周邊類型 | 腳位 (Pin) | 硬體元件 | 功能描述 |
 | :--- | :--- | :--- | :--- |
-| **TIM3 CH1** | - | 白色 LED | 呼吸燈 (預設 Pulse = 160) |
-| **TIM3 CH2** | - | 藍色 LED | 呼吸燈 (預設 Pulse = 400) |
+| **TIM3 CH1** | `PA6` | 白色 LED | 呼吸燈 (預設 Pulse = 160) |
+| **TIM3 CH2** | `PA7` | 藍色 LED | 呼吸燈 (預設 Pulse = 400) |
 | **GPIO Output** | `PC2` | 綠色 LED | 正常巡航狀態指示燈 (恆亮) |
 | **GPIO Output** | `PC3` | 紅色 LED | 警報爆閃燈 (戰術交戰時 100ms 閃爍) |
 | **GPIO Output** | `PA5` | 黃色 LED | 天氣狀態燈 (依天氣模式不同頻率閃爍) |
