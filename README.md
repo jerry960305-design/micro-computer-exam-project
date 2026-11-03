@@ -1,32 +1,3 @@
-micro-computer-exam-project/
-│
-├── .gitignore                # Git 忽略追蹤設定檔 (排除編譯暫存檔)
-├── README.md                 # 專案總覽與使用說明書 (即主要的專案目錄首頁)
-├── micro computer exam project.ioc # STM32CubeMX 硬體配置專案檔
-│
-├── Core/                     # 核心程式碼資料夾
-│   ├── Inc/                  # 標頭檔 (.h) 目錄
-│   │   ├── main.h            # 主標頭檔 (含硬體腳位巨集與周邊宣告)
-│   │   ├── stm32g4xx_hal_conf.h # HAL 庫配置標頭檔
-│   │   └── stm32g4xx_it.h    # 中斷服務常式宣告標頭檔
-│   │
-│   └── Src/                  # 原始程式碼 (.c) 目錄
-│       ├── main.c            # 主程式 (包含 FSM、PWM、去彈跳、環形緩衝區與指令解析)
-│       ├── stm32g4xx_it.c    # 中斷服務常式實作 (含 UART 接收中斷回呼)
-│       ├── stm32g4xx_hal_msp.c # HAL 模組底層初始化設定
-│       └── system_stm32g4xx.c  # 系統時脈與硬體初始化支援
-│
-├── Drivers/                  # 官方硬體驅動與 HAL 庫
-│   ├── CMSIS/                # ARM Cortex-M 核心介面標準
-│   └── STM32G4xx_HAL_Driver/ # STM32G4 系列 HAL 驅動程式庫
-│
-└── 📁 Debug/                 # 編譯輸出與偵錯資料夾 (自動生成，含 .elf, .hex, .bin)
-# STM32 HAL 綜合巡航與天氣控制系統 (STM32 Navigation & Weather Control FSM)
-
-基於 **STM32 HAL 庫** 開發的嵌入式綜合控制系統。本專案結合了 **有限狀態機 (FSM)**、**PWM 呼吸燈**、**非阻塞式時間管理 (`HAL_GetTick`)**、**硬體按鈕去彈跳** 以及 **UART 環形緩衝區 (Ring Buffer) 指令解析**，適用於智慧載具、情境面板或嵌入式教學示範。
-
----
-
 ## 📌 系統功能亮點
 
 * **雙層狀態機 (FSM)**：劃分為主系統狀態（正常巡航/戰術交戰）與子天氣模式。
