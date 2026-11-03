@@ -168,7 +168,7 @@ static void MX_TIM3_Init(void)
     }
 
     sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-    sMasterConfig.MasterSlaveMode = DISABLE;
+    sMasterConfig.MasterSlaveMode = TIM_DISABLE;
     if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
     {
         Error_Handler();
@@ -208,6 +208,7 @@ static void MX_USART2_UART_Init(void)
     huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
     huart2.Init.OverSampling = UART_OVERSAMPLING_16;
     huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+    huart2.AdvancedInit.InitState = UART_ADVINIT_NO_INIT;
     if (HAL_UART_Init(&huart2) != HAL_OK)
     {
         Error_Handler();
